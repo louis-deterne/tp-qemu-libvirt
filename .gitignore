@@ -1,0 +1,6 @@
+*.qcow2
+*.img
+*.iso
+*.vmdk
+*.7z
+*.zip

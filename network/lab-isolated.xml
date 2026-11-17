@@ -1,0 +1,12 @@
+<network connections='1'>
+  <name>lab-isolated</name>
+  <uuid>763a8f80-a3d9-4c34-b8cf-c2f239316f55</uuid>
+  <bridge name='virbr-lab' stp='on' delay='0'/>
+  <mac address='52:54:00:ec:e4:dd'/>
+  <ip address='10.10.10.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='10.10.10.100' end='10.10.10.200'/>
+    </dhcp>
+  </ip>
+</network>
+
