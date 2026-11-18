@@ -22,7 +22,7 @@ instance-id: vm-test-$(date +%s)
 local-hostname: vm-test
 EOF
 
-# 2. Nettoyage de l'ancienne VM
+# 2. cleanup de l'ancienne VM
 virsh destroy vm-test 2>/dev/null || true
 virsh undefine vm-test 2>/dev/null || true
 sudo rm -f $IMG/vm-test.qcow2 $IMG/vm-test-seed.iso
@@ -39,4 +39,4 @@ virt-install --name vm-test --memory 2048 --vcpus 2 \
   --network network=lab-isolated \
   --os-variant ubuntu22.04 --graphics none --noautoconsole
 
-echo "VM en cours de démarrage, attends ~1 min puis : virsh net-dhcp-leases lab-isolated"
+echo "VM en cours de démarrage, attendez ~1 min puis : virsh net-dhcp-leases lab-isolated"
